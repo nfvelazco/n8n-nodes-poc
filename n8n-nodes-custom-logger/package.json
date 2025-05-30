@@ -1,0 +1,46 @@
+{
+  "name": "n8n-nodes-custom-logger-snoop",
+  "version": "0.1.11",
+  "description": "Paquete de nodos personalizados para n8n: Custom Logger Node para PostgreSQL.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "n8n",
+    "node",
+    "custom",
+    "logger",
+    "postgresql"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "n8n-core": "^1.14.1",
+    "n8n-nodes-base": "^1.14.1",
+    "n8n-workflow": "^1.82.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/pg": "^8.15.2",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "n8n": {
+    "nodesToLoad": [
+      {
+        "type": "node",
+        "sourcePath": "./dist/CustomLoggerNode.js"
+      },
+      {
+        "type": "node",
+        "sourcePath": "./dist/HelloWorldNode.js"
+      }
+    ]
+  }
+}

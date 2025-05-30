@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS custom_logs (
+  id SERIAL PRIMARY KEY,
+  status_code INTEGER NOT NULL,
+  data JSONB NOT NULL,
+  message TEXT,
+  origin TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
